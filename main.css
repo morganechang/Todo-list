@@ -1,0 +1,11 @@
+body {
+  text-align: center;
+  margin: 50px 0;
+}
+
+/*- style the list (remove the dot) - text text-decoration: 
+- prevent empty item from being added 
+- Add conditional statement: if empty; return, don't do action;
+- Error message*/
+/*- how to cross off list, how to remove things from list*/
+/*- wireframe, what kind of behavior*/
