@@ -1,6 +1,6 @@
 var listItems = ["Buy Gifts", "Watch Love Actually", "Finish Harry Potter"];
 
-var ul = document.getElementById("list"); // this is the container for the ul,
+var ul = document.getElementById("list"); // this is the container for the ul and how we access it,
 
 for (var i = 0; i < listItems.length; i++) {
 	var li = document.createElement("li");  //this is a REFERENCE

@@ -1,7 +1,21 @@
 body {
   text-align: center;
   margin: 50px 0;
+  background-image: url("Images/paper.jpg");
+  background-size: 50%;
+
+ 
 }
+
+#list{
+	list-style: block;
+}
+
+h1{
+	font-family: 'Permanent Marker', cursive;
+	font-size: 400%;
+}
+
 
 /*- style the list (remove the dot) - text text-decoration: 
 - prevent empty item from being added 
