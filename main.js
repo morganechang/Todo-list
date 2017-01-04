@@ -16,8 +16,18 @@ function addItem(){
 	ul.appendChild(li);
 	document.getElementById("todo-input").value = "";
 	// parent element.appendChild (child)
+ 	
+    if (item == "") { //refers to variable "item" (ie: the input's ID) that is empty
+        alert("You need to type something, you busy bee!");
+        return false;
+    }
 
+	// debugger
 }
+
+// function validateForm() {
+   
+// }
 
 // after item is added, clear input field
 
