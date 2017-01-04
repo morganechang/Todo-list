@@ -19,6 +19,34 @@ h1{
 }
 
 
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 5px;
+    left: 5px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 4px 4px 4px 4px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+
 /*- style the list (remove the dot) - text text-decoration: 
 - prevent empty item from being added 
 - Add conditional statement: if empty; return, don't do action;
