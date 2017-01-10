@@ -21,38 +21,43 @@ h1{
 	font-family: 'Permanent Marker', cursive;
 	font-size: 400%;
 }
-/*
+
 ul li:empty {
    display: none;
+}
+
+/*#input {
+    position: absolute;
+    left: -9999px;
+}
+
+#input:checked + label {
+    /* awesome styles 
 }*/
 
 /* Add a "checked" mark when clicked on */
-ul li.checked::before {
+/*ul li.checked::before {
     content: '';
     position: absolute;
     border-width: 0 2px 2px 0;
     top: 5px;
     left: 5px;
     /*transform: rotate(45deg);*/
-    height: 15px;
+    /*height: 15px;
     width: 7px;
-}
+}*/
 
 
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  text-decoration: line-through;
-}
 
 /* Style the list items */
-ul li {
+/*ul li {
   cursor: pointer;
   position: relative;
   padding: 4px 4px 4px 4px;
   background: white;
   font-size: 18px;
   transition: 0.2s;
-  
+  */
 
 /*- style the list (remove the dot) - text text-decoration: 
 - prevent empty item from being added 
