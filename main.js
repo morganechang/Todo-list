@@ -9,10 +9,7 @@ for (var i = 0; i < listItems.length; i++) {  // FOR is a loop; the most common 
 	ul.append(li); 
 	// or just single line coudl be var ul.("<li></li>").append(listItems[i]);
 	// $('<input type="checkbox" value="1"/>').prependTo("li");
-
 }
-
-
 
 
 function addItem(){
@@ -22,35 +19,57 @@ function addItem(){
 	} else {
 		listItems.push(item); // pushing to add this element to the list; only method available to call on an ARRAY
 		// var li = $("<li input type="checkbox"/li>").append(item);
-
-			var li = $("<li></li>").append(item);  // this is creating an empty list item
-			// $('<input type="checkbox"/>').prependTo("li");
-
-			ul.append(li); // append li to the ul, the list. parent.append(child).append().append()...
-			$("#todo-input").val(""); // this clears the input field, with jQuery, you can do .val(text); remove .val()=""
-			console.log("Item added to list");
-			}	
+		var li = $("<li></li>").append(item);  // this is creating an empty list item
+		// $('<input type="checkbox"/>').prependTo("li");
+		ul.append(li); // append li to the ul, the list. parent.append(child).append().append()...
+		$("#todo-input").val(""); // this clears the input field, with jQuery, you can do .val(text); remove .val()=""
+		console.log("Item added to list");
+	}	
 
 	$("li").click(function(){    // we are listening for a click event anywhere on the page;
 		$(toggleStrikeThrough($(this))); // this outside function is defined, so we use (this) to reference the specific item that is being clicked for the code to perform an action onto	
 	})  // $(toggleStrikeThrough($(this-refers to item function performed on)));
+};
 
-	function toggleStrikeThrough(item){
-		item.css("text-decoration", "line-through");
-
-		}
-	};
-
+	// function toggleStrikeThrough(item){
+	// 	item.css("text-decoration", "line-through");
+	// }
 
 $("li").click(function(){    // we are listening for a click event anywhere on the page;
-	$(toggleStrikeThrough($(this))); // this outside function is defined, so we use (this) to reference the specific item that is being clicked for the code to perform an action onto	
-})  // $(toggleStrikeThrough($(this-refers to item function performed on)));
+		$(toggleStrikeThrough($(this))); // this outside function is defined, so we use (this) to reference the specific item that is being clicked for the code to perform an action onto	
+	})  // $(toggleStrikeThrough($(this-refers to item function performed on)));	
 
 
-function toggleStrikeThrough(item){
-	item.css("text-decoration", "line-through");
 
+function toggleStrikeThrough(item){	
+	if (item.css("text-decoration") == "line-through"){
+		item.css("text-decoration", "none");    // if used .removeClass("done") - we can use "done" tied to a certain css property - line strikethrough
+	}else {
+		item.css("text-decoration", "line-through"); 
+	}
 }
+
+// function toggleStrikeThrough(item){
+// 	item.css("text-decoration", "line-through");
+// }
+
+// ALTERNATIVE OPTION: 
+
+// function toggleStrikeThrough(item) {
+//     if (item.hasClass("linethrough")){
+//         item.removeClass("linethrough");
+//     } else {
+//         item.addClass("linethrough");
+//     }
+// }
+
+// CSS doc:
+// .linethrough{
+// 	text-decoration: line-through;
+// }
+
+
+
 
 
 
