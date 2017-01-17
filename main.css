@@ -26,7 +26,19 @@ ul li:empty {
    display: none;
 }
 
+.remove{
+  float: right;
+  margin-right: 5%;
+}
 
+
+a:hover { 
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    width: 3%;
+}
 
 /*#input {
     position: absolute;
